@@ -96,6 +96,11 @@
             <artifactId>zkclient</artifactId>
             <version>${zkclient.version}</version>
         </dependency>
+		<!--redis起步依赖包-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
 	</dependencies>
 
 

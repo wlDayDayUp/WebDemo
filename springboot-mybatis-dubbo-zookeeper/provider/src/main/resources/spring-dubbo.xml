@@ -20,4 +20,9 @@
     <bean id="userService" class="com.lj.provider.service.impl.UserImpl"/>
     <!-- declare the service interface to be exported -->
     <dubbo:service interface="com.lj.common.service.UserService" ref="userService"/>
+
+    <!-- service implementation, as same as regular local bean -->
+    <bean id="redisService" class="com.lj.provider.service.impl.RedisImpl"/>
+    <!-- declare the service interface to be exported -->
+    <dubbo:service interface="com.lj.common.service.RedisService" ref="redisService"/>
 </beans>
