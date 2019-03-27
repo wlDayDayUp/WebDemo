@@ -5,16 +5,12 @@ import com.lj.common.domin.User;
 import com.lj.common.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: gaopeng
- * Date: 2018/8/28 0028
- * Time: 17:45
- * Description:
- */
+
 @RestController
 public class UserController {
     @Resource
@@ -22,9 +18,12 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("getUser")
-    public User user(){
+    public ModelAndView user(ModelAndView mv){
         System.out.println("进来了！！！！！！！！！！！！！！！！");
         System.out.println(userService.hashCode()+"!!!!!!!!!!!!!!!!");
-        return userService.findUser();
+        List<User> user = userService.findUser();
+        mv.setViewName("listuser");
+        mv.addObject("user",user);
+        return mv;
     }
 }

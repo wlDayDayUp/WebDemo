@@ -7,14 +7,9 @@ import com.lj.provider.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Resource;
+import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: gaopeng
- * Date: 2018/8/28 0028
- * Time: 20:02
- * Description:
- */
+
 @Service(version = "1.0.0")
 public class UserImpl implements UserService {
 
@@ -22,7 +17,7 @@ public class UserImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public User findUser() {
+    public List<User> findUser() {
 //        User user = new User();
 //        user.setAge(12);
 //        user.setId(1);

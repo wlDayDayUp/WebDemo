@@ -17,5 +17,5 @@ public interface UserMapper {
 
     @Select("SELECT * FROM u_user t WHERE t.id = #{id}")
     @ResultMap("userMap")
-    User getOne(Long id);
+    List<User> getOne(Long id);
 }
