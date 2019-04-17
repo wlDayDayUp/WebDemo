@@ -74,7 +74,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.lj</groupId>
+            <artifactId>provider</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+		<!--服务接口Jar-->
+		<dependency>
+			<groupId>com.aspire.aplus</groupId>
+			<artifactId>sim</artifactId>
+		</dependency>
+    </dependencies>
 
 	<build>
 		<plugins>

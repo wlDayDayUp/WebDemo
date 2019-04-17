@@ -1,11 +1,9 @@
 package com.lj.common.service;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
+import com.alibaba.dubbo.config.annotation.Service;
 
 import java.util.List;
 import java.util.Set;
-
+@Service
 public interface RedisService {
     /**
      * 写入缓存
